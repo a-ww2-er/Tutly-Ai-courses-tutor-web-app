@@ -7,7 +7,7 @@ import{
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from '@/components/ui/DropdownMenu'
+} from '@/components/ui/dropdown-menu'
 import { Button } from './ui/button';
 
 

@@ -5,6 +5,12 @@
 /.pnp
 .pnp.js
 
+.env
+/src/app/api/course
+/env
+/.env
+*.env
+
 # testing
 /coverage
 

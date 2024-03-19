@@ -4,6 +4,7 @@ import { User } from "next-auth";
 import { signOut } from "next-auth/react";
 import React from "react";
 import { Button } from "./ui/button";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import UserAvatar from "./UserAvatar";
 
 type Props = {
@@ -27,7 +28,7 @@ const UserAccountNav = ({ user }: Props) => {
             )}
           </div>
         </div>
-        <DropdownMenuSeperator />
+        <DropdownMenuSeparator />
         <DropdownMenuItem onSelect={()=>{
             signOut();
         }} className='text-red-600 cursor-pointer'>
