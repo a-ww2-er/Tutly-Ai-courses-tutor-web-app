@@ -1,14 +1,15 @@
 "use client";
 import React from "react";
-import { Form } from "./ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel } from "./ui/form";
 import { z } from "zod";
 import { createChaptersSchema } from "@/validators/course";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers";
-import { Input } from "postcss";
+import { zodResolver}  from "@hookform/resolvers/zod";
+import { Input } from "./ui/input";
 import { Plus, SeparatorHorizontal, Trash } from "lucide-react";
 import { Button } from "./ui/button";
 import {motion, AnimatePresence} from 'framer-motion';
+import { Separator } from "./ui/separator";
 
 type Props = {};
 
@@ -98,7 +99,7 @@ const CreateCourseForm = (props: Props) => {
             <div className="mx-4">
                 <Button type="button" variant='secondary' className='font-semibold'
                 onClick={()=>{
-                    form.setValue("units",[...form.watch("units").''])
+                    form.setValue("units",[...form.watch("units"), ''])
                 }}
                 >
                     Add Unit <Plus className="w-4 h-4 ml-2 text-green-600"/>
